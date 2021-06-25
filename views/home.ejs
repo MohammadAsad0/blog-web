@@ -1,0 +1,15 @@
+<%- include("header") -%>
+
+<h1>HOME</h1>
+<p><%= para %></p>
+
+    <% newBlogs.forEach(function (blog){ %>
+        <h2><%= blog.title %></h2>
+        <p><%= blog.body.substring(0,100) + " ..." %>
+            <a href="/post/<%= blog.title %>">Read More</a>
+        </p>
+    <% }); %> 
+
+
+<%- include("footer") -%>
+
